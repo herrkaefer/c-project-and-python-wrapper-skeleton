@@ -1,4 +1,3 @@
-
 /*  =========================================================================
     nbs_planet - N-Body Simulation of Planet
     Copyright (c) the Contributors as noted in the AUTHORS file.

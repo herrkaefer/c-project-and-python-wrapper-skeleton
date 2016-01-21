@@ -8,14 +8,6 @@
     =========================================================================
 */
 
-/*
-@header
-    This class aims for N-Body Simulation.
-@discuss
-
-@end
-*/
-
 #include "nbs_planet.h"
 
 #include <stdio.h>
