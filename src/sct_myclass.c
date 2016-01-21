@@ -8,15 +8,19 @@
     =========================================================================
 */
 
-#include "sct_myclass.h"
+/*
+@header
+    Summary of myclass
+@discuss
+    Details of myclass
+@end
+*/
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <assert.h>
+#include "sct_classes.h"
+
 
 //  --------------------------------------------------------------------------
-//  Structure of planet
+//  Structure of myclass
 
 struct _sct_myclass_t {
     // properties here
@@ -57,20 +61,39 @@ sct_myclass_destroy (sct_myclass_t **self_p) {
     }
 }
 
+
 //  --------------------------------------------------------------------------
-//  Get name property. Note that it's defined as 'const' so
-//  the caller cannot modify it.
+//  Get name property.
+//  Note that it's defined as 'const' so the caller cannot modify it.
+
 const char *
 sct_myclass_name (sct_myclass_t *self) {
     assert (self);
     return self->name;
 }
 
+
 //  --------------------------------------------------------------------------
 //  Set name property
+
 void
 sct_myclass_set_name (sct_myclass_t *self, const char *name) {
     assert (self);
     free (self->name);
     return self->name = strdup (name);
+}
+
+
+//  --------------------------------------------------------------------------
+//  Self test of this class
+
+void
+sct_myclass_test (bool verbose)
+{
+    printf (" * sct_myclass: ");
+    //  @selftest
+    sct_myclass_t *myclass = sct_myclass_new ();
+    gdom_server_destroy (&myclass);
+    //  @end
+    printf ("OK\n");
 }

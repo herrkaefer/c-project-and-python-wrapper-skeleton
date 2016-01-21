@@ -17,6 +17,7 @@ extern "C" {
 
 typedef struct _sct_myclass_t sct_myclass_t;
 
+// @interface
 // Create a new myclass object
 sct_myclass_t *
     sct_myclass_new (void);
@@ -32,6 +33,7 @@ const char *
 // Set name property
 void
     sct_myclass_set_name (sct_myclass_t *self, const char *name);
+// @end
 
 #ifdef __cplusplus
 }
