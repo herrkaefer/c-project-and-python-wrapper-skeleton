@@ -1,14 +1,14 @@
 /*  =========================================================================
-    nbs_planet - N-Body Simulation of Planet
+    sct_myclass - Scalable C Template: Myclass
     Copyright (c) the Contributors as noted in the AUTHORS file.
-    This file is part of the N-Body Simulation Project.
+    This file is part of the Scalable C Template Project.
     This Source Code Form is subject to the terms of the Mozilla Public
     License, v. 2.0. If a copy of the MPL was not distributed with this
     file, You can obtain one at http://mozilla.org/MPL/2.0/.
     =========================================================================
 */
 
-#include "nbs_planet.h"
+#include "sct_myclass.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,7 +18,7 @@
 //  --------------------------------------------------------------------------
 //  Structure of planet
 
-struct _nbs_planet_t {
+struct _sct_myclass_t {
     // properties here
     int filler;
     char *name;
@@ -28,9 +28,9 @@ struct _nbs_planet_t {
 //  --------------------------------------------------------------------------
 //  Class constructor
 
-nbs_planet_t *
-nbs_planet_new (void) {
-    nbs_planet_t *self = (nbs_planet_t *) malloc (sizeof (nbs_planet_t));
+sct_myclass_t *
+sct_myclass_new (void) {
+    sct_myclass_t *self = (sct_myclass_t *) malloc (sizeof (sct_myclass_t));
     assert (self);
 
     // Aim to initialize all properties to null/zero/false/empty by default.
@@ -44,10 +44,10 @@ nbs_planet_new (void) {
 //  Class destructor
 
 void
-nbs_planet_destroy (nbs_planet_t **self_p) {
+sct_myclass_destroy (sct_myclass_t **self_p) {
     assert (self_p);
     if (*self_p) {
-        nbs_planet_t *self = *self_p;
+        sct_myclass_t *self = *self_p;
 
         // free properties here
         free (self->name); self->name = NULL; // or: safe_free (&self->name)
@@ -61,7 +61,7 @@ nbs_planet_destroy (nbs_planet_t **self_p) {
 //  Get name property. Note that it's defined as 'const' so
 //  the caller cannot modify it.
 const char *
-nbs_planet_name (nbs_planet_t *self) {
+sct_myclass_name (sct_myclass_t *self) {
     assert (self);
     return self->name;
 }
@@ -69,7 +69,7 @@ nbs_planet_name (nbs_planet_t *self) {
 //  --------------------------------------------------------------------------
 //  Set name property
 void
-nbs_planet_set_name (nbs_planet_t *self, const char *name) {
+sct_myclass_set_name (sct_myclass_t *self, const char *name) {
     assert (self);
     free (self->name);
     return self->name = strdup (name);

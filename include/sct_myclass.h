@@ -1,37 +1,37 @@
 /*  =========================================================================
-    nbs_planet - N-Body Simulation of Planet
+    sct_myclass - Scalable C Template: Myclass
     Copyright (c) the Contributors as noted in the AUTHORS file.
-    This file is part of the N-Body Simulation Project.
+    This file is part of the Scalable C Template Project.
     This Source Code Form is subject to the terms of the Mozilla Public
     License, v. 2.0. If a copy of the MPL was not distributed with this
     file, You can obtain one at http://mozilla.org/MPL/2.0/.
     =========================================================================
 */
 
-#ifndef NBS_PLANET_H_INCLUDED
-#define NBS_PLANET_H_INCLUDED
+#ifndef SCT_MYCLASS_H_INCLUDED
+#define SCT_MYCLASS_H_INCLUDED
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-typedef struct _nbs_planet_t nbs_planet_t;
+typedef struct _sct_myclass_t sct_myclass_t;
 
-// Create a new planet
-nbs_planet_t *
-    nbs_planet_new (void);
+// Create a new myclass object
+sct_myclass_t *
+    sct_myclass_new (void);
 
-// Destroy a planet
+// Destroy myclass object
 void
-    nbs_planet_destroy (nbs_planet_t **self_p);
+    sct_myclass_destroy (sct_myclass_t **self_p);
 
-// Get planet name
+// Get name property
 const char *
-    nbs_planet_name (nbs_planet_t *self);
+    sct_myclass_name (sct_myclass_t *self);
 
-// Set planet name
+// Set name property
 void
-    nbs_planet_set_name (nbs_planet_t *self, const char *name);
+    sct_myclass_set_name (sct_myclass_t *self, const char *name);
 
 #ifdef __cplusplus
 }
