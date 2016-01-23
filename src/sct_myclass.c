@@ -8,14 +8,6 @@
     =========================================================================
 */
 
-/*
-@header
-    Summary of myclass
-@discuss
-    Details of myclass
-@end
-*/
-
 #include "sct_classes.h"
 
 
@@ -91,9 +83,7 @@ void
 sct_myclass_test (bool verbose)
 {
     printf (" * sct_myclass: ");
-    //  @selftest
     sct_myclass_t *myclass = sct_myclass_new ();
     gdom_server_destroy (&myclass);
-    //  @end
     printf ("OK\n");
 }

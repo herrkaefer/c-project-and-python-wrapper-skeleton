@@ -15,7 +15,7 @@
 //  External dependencies
 // #include <czmq.h>
 
-//  GLOBDOM version macros for compile-time API detection
+//  version macros for compile-time API detection
 #define GLOBDOM_VERSION_MAJOR 0
 #define GLOBDOM_VERSION_MINOR 1
 #define GLOBDOM_VERSION_PATCH 0
