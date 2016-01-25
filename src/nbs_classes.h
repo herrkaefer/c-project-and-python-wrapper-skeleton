@@ -11,6 +11,12 @@
 #ifndef NBS_CLASSES_H_INCLUDED
 #define NBS_CLASSES_H_INCLUDED
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
+#include <assert.h>
+
 // external API
 #include "../include/nbs.h"
 

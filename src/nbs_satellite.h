@@ -33,6 +33,10 @@ const char *
 void
     nbs_satellite_set_name (nbs_satellite_t *self, const char *name);
 
+// Self test
+void
+    nbs_satellite_test (bool verbose);
+
 #ifdef __cplusplus
 }
 #endif

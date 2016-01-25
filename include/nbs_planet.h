@@ -33,6 +33,30 @@ const char *
 void
     nbs_planet_set_name (nbs_planet_t *self, const char *name);
 
+// Get mass property
+double
+    nbs_planet_mass (nbs_planet_t *self);
+
+// Set mass property
+void
+    nbs_planet_set_mass(nbs_planet_t *self, double mass);
+
+// Get velocity property
+double
+    nbs_planet_velocity (nbs_planet_t *self);
+
+// Set velocity property
+void
+    nbs_planet_set_velocity(nbs_planet_t *self, double velocity);
+
+// Get momentum
+double
+    nbs_planet_momentum (nbs_planet_t *self);
+
+// Self test
+void
+    nbs_planet_test (bool verbose);
+
 #ifdef __cplusplus
 }
 #endif

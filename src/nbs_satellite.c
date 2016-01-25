@@ -17,7 +17,6 @@
 struct _nbs_satellite_t {
     // properties here
     char *name;
-    double radius;
 };
 
 
@@ -72,7 +71,7 @@ void
 nbs_satellite_set_name (nbs_satellite_t *self, const char *name) {
     assert (self);
     free (self->name);
-    return self->name = strdup (name);
+    self->name = strdup (name);
 }
 
 
@@ -84,6 +83,6 @@ nbs_satellite_test (bool verbose)
 {
     printf (" * nbs_satellite: ");
     nbs_satellite_t *satellite = nbs_satellite_new ();
-    nba_satellite_destroy (&satellite);
+    nbs_satellite_destroy (&satellite);
     printf ("OK\n");
 }
