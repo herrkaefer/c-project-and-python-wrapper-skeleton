@@ -11,6 +11,8 @@ It then can be used as a template or standard reference for further development.
 
 ## Scalable C Summary
 
+A brief summary of [Scalable C](https://hintjens.gitbooks.io/scalable-c/) by @hintjens.
+
 ### Code Organization
 
 One project, one repository.
@@ -47,8 +49,12 @@ See the code and [CLASS C language style](http://rfc.zeromq.org/spec:21).
 
 ## The C Project
 
-- Project name: Scalable C Template
-- Project prefix: sct
+- Project name: N-Body Simulation
+- Project prefix: nbs
+- Public classes:
+    - planet
+- Private classes:
+    - satellite
 
 
 ## The Python Wrapper

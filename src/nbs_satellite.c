@@ -1,32 +1,32 @@
 /*  =========================================================================
-    sct_myclass - Scalable C Template: Myclass
+    nbs_satellite - N-Body Simulation: Satellite
     Copyright (c) the Contributors as noted in the AUTHORS file.
-    This file is part of the Scalable C Template Project.
+    This file is part of the N-Body Simulation Project.
     This Source Code Form is subject to the terms of the Mozilla Public
     License, v. 2.0. If a copy of the MPL was not distributed with this
     file, You can obtain one at http://mozilla.org/MPL/2.0/.
     =========================================================================
 */
 
-#include "sct_classes.h"
+#include "nbs_classes.h"
 
 
 //  --------------------------------------------------------------------------
-//  Structure of myclass
+//  Structure of satellite
 
-struct _sct_myclass_t {
+struct _nbs_satellite_t {
     // properties here
-    int filler;
     char *name;
+    double radius;
 };
 
 
 //  --------------------------------------------------------------------------
 //  Class constructor
 
-sct_myclass_t *
-sct_myclass_new (void) {
-    sct_myclass_t *self = (sct_myclass_t *) malloc (sizeof (sct_myclass_t));
+nbs_satellite_t *
+nbs_satellite_new (void) {
+    nbs_satellite_t *self = (nbs_satellite_t *) malloc (sizeof (nbs_satellite_t));
     assert (self);
 
     // Aim to initialize all properties to null/zero/false/empty by default.
@@ -40,10 +40,10 @@ sct_myclass_new (void) {
 //  Class destructor
 
 void
-sct_myclass_destroy (sct_myclass_t **self_p) {
+nbs_satellite_destroy (nbs_satellite_t **self_p) {
     assert (self_p);
     if (*self_p) {
-        sct_myclass_t *self = *self_p;
+        nbs_satellite_t *self = *self_p;
 
         // free properties here
         free (self->name); self->name = NULL; // or: safe_free (&self->name)
@@ -59,7 +59,7 @@ sct_myclass_destroy (sct_myclass_t **self_p) {
 //  Note that it's defined as 'const' so the caller cannot modify it.
 
 const char *
-sct_myclass_name (sct_myclass_t *self) {
+nbs_satellite_name (nbs_satellite_t *self) {
     assert (self);
     return self->name;
 }
@@ -69,7 +69,7 @@ sct_myclass_name (sct_myclass_t *self) {
 //  Set name property
 
 void
-sct_myclass_set_name (sct_myclass_t *self, const char *name) {
+nbs_satellite_set_name (nbs_satellite_t *self, const char *name) {
     assert (self);
     free (self->name);
     return self->name = strdup (name);
@@ -80,10 +80,10 @@ sct_myclass_set_name (sct_myclass_t *self, const char *name) {
 //  Self test of this class
 
 void
-sct_myclass_test (bool verbose)
+nbs_satellite_test (bool verbose)
 {
-    printf (" * sct_myclass: ");
-    sct_myclass_t *myclass = sct_myclass_new ();
-    gdom_server_destroy (&myclass);
+    printf (" * nbs_satellite: ");
+    nbs_satellite_t *satellite = nbs_satellite_new ();
+    nba_satellite_destroy (&satellite);
     printf ("OK\n");
 }

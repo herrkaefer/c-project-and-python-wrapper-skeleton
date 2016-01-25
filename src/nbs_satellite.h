@@ -1,37 +1,37 @@
 /*  =========================================================================
-    sct_myclass - Scalable C Template: Myclass
+    nbs_satellite - N-Body Simulation: Satellite
     Copyright (c) the Contributors as noted in the AUTHORS file.
-    This file is part of the Scalable C Template Project.
+    This file is part of the N-Body Simulation Project.
     This Source Code Form is subject to the terms of the Mozilla Public
     License, v. 2.0. If a copy of the MPL was not distributed with this
     file, You can obtain one at http://mozilla.org/MPL/2.0/.
     =========================================================================
 */
 
-#ifndef SCT_MYCLASS_H_INCLUDED
-#define SCT_MYCLASS_H_INCLUDED
+#ifndef NBS_SATELLITE_H_INCLUDED
+#define NBS_SATELLITE_H_INCLUDED
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-typedef struct _sct_myclass_t sct_myclass_t;
+typedef struct _nbs_satellite_t nbs_satellite_t;
 
-// Create a new myclass object
-sct_myclass_t *
-    sct_myclass_new (void);
+// Create a new satellite object
+nbs_satellite_t *
+    nbs_satellite_new (void);
 
-// Destroy myclass object
+// Destroy satellite object
 void
-    sct_myclass_destroy (sct_myclass_t **self_p);
+    nbs_satellite_destroy (nbs_satellite_t **self_p);
 
 // Get name property
 const char *
-    sct_myclass_name (sct_myclass_t *self);
+    nbs_satellite_name (nbs_satellite_t *self);
 
 // Set name property
 void
-    sct_myclass_set_name (sct_myclass_t *self, const char *name);
+    nbs_satellite_set_name (nbs_satellite_t *self, const char *name);
 
 #ifdef __cplusplus
 }

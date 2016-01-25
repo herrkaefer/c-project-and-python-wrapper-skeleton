@@ -1,7 +1,7 @@
 /*  =========================================================================
-    sct - Scalable C Template public header
+    nbs - public project header
     Copyright (c) the Contributors as noted in the AUTHORS file.
-    This file is part of the Scalable C Template Project.
+    This file is part of the N-Body Simulation Project.
 
     This Source Code Form is subject to the terms of the Mozilla Public
     License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -9,11 +9,11 @@
     =========================================================================
 */
 
-#ifndef __SCT_H_INCLUDED__
-#define __SCT_H_INCLUDED__
+#ifndef __NBS_H_INCLUDED__
+#define __NBS_H_INCLUDED__
 
 //  External dependencies
-// #include <czmq.h>
+// eg. #include <czmq.h>
 
 //  version macros for compile-time API detection
 #define GLOBDOM_VERSION_MAJOR 0
@@ -28,6 +28,6 @@
     GLOBDOM_VERSION_PATCH)
 
 //  Public API classes
-#include "sct_myclass.h"
+#include "nbs_planet.h"
 
 #endif
