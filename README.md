@@ -1,15 +1,17 @@
-# C project and Python wrapper skeleton
+# C Project and Python Wrapper Skeleton
 
-## Purpose
+## The Goal
 
 This project aims to provide a skeleton template of
 
 1. A C library project which conforms to some methodology in writing the code.
 2. A Python interface of the C library
 
-## The C project
+It then can be used as a template or standard reference for further development.
 
-The C project template conforms to [scalable C](https://hintjens.gitbooks.io/scalable-c/) standard and [CLASS C language style](http://rfc.zeromq.org/spec:21).
+## The C Project
+
+The C project template conforms to [Scalable C](https://hintjens.gitbooks.io/scalable-c/) standard and [CLASS C language style](http://rfc.zeromq.org/spec:21).
 
 - Project name: Scalable C Template
 - Project prefix: sct
@@ -19,7 +21,7 @@ ref:
 - [scalable-c/globdom](https://github.com/scalable-c/globdom)
 - [zproject](https://github.com/zeromq/zproject)
 
-## The Python wrapper
+## The Python Wrapper
 
 Use [Cython](http://cython.org/) to make a Python wrapper of the C public APIs.
 
