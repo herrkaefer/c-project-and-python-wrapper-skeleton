@@ -17,7 +17,10 @@
 struct _nbs_planet_t {
     // properties here
     char *name;
-    double radius;
+    double mass;
+    double velocity;
+    // int num_satellite;
+    // nbs_satellite_t *satellites;
 };
 
 
@@ -31,6 +34,10 @@ nbs_planet_new (void) {
 
     // Aim to initialize all properties to null/zero/false/empty by default.
     self->name = NULL;
+    self->mass = 0.0
+    self->velocity = 0.0;
+    num_satellite = 0;
+    satellites = NULL;
 
     return self;
 }
@@ -47,6 +54,7 @@ nbs_planet_destroy (nbs_planet_t **self_p) {
 
         // free properties here
         free (self->name); self->name = NULL; // or: safe_free (&self->name)
+        free (self->satellites); satellites = NULL;
 
         free (self);
         *self_p = NULL;
@@ -73,6 +81,56 @@ nbs_planet_set_name (nbs_planet_t *self, const char *name) {
     assert (self);
     free (self->name);
     return self->name = strdup (name);
+}
+
+
+//  --------------------------------------------------------------------------
+//  Get mass property.
+
+double
+nbs_planet_mass (nbs_planet_t *self) {
+    assert (self);
+    return self->mass;
+}
+
+
+//  --------------------------------------------------------------------------
+//  Set mass property
+
+void
+nbs_planet_set_mass (nbs_planet_t *self, double mass) {
+    assert (self);
+    return self->mass = mass;
+}
+
+
+//  --------------------------------------------------------------------------
+//  Get velocity property.
+
+double
+nbs_planet_mass (nbs_planet_t *self) {
+    assert (self);
+    return self->velocity;
+}
+
+
+//  --------------------------------------------------------------------------
+//  Set velocity property
+
+void
+nbs_planet_set_mass (nbs_planet_t *self, double velocity) {
+    assert (self);
+    return self->velocity = velocity;
+}
+
+
+//  --------------------------------------------------------------------------
+//  Get momentum
+
+double
+nbs_planet_momentum (nbs_planet_t *self) {
+    assert (self);
+    return self->mass * self->velocity;
 }
 
 

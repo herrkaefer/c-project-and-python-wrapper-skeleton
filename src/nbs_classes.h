@@ -1,5 +1,5 @@
 /*  =========================================================================
-    nbs_classes - private project header
+    nbs_classes - project private header
     Copyright (c) the Contributors as noted in the AUTHORS file.
     This file is part of the N-Body Simulation Project.
     This Source Code Form is subject to the terms of the Mozilla Public
@@ -15,6 +15,6 @@
 #include "../include/nbs.h"
 
 // internal API
-//
+#include "nbs_satellite.h"
 
 #endif

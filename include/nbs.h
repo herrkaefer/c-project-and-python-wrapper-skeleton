@@ -1,5 +1,5 @@
 /*  =========================================================================
-    nbs - public project header
+    nbs - project public header
     Copyright (c) the Contributors as noted in the AUTHORS file.
     This file is part of the N-Body Simulation Project.
 
