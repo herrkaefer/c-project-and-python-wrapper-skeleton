@@ -1,5 +1,5 @@
 /*  =========================================================================
-    nbs_classes - project private header
+    nbs_psys - N-Body Simulation: Particles System
     Copyright (c) the Contributors as noted in the AUTHORS file.
     This file is part of the N-Body Simulation Project.
     This Source Code Form is subject to the terms of the Mozilla Public
@@ -8,20 +8,32 @@
     =========================================================================
 */
 
-#ifndef NBS_CLASSES_H_INCLUDED
-#define NBS_CLASSES_H_INCLUDED
+#ifndef NBS_PSYS_H_INCLUDED
+#define NBS_PSYS_H_INCLUDED
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdbool.h>
-#include <assert.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-// external API
-#include "../include/nbs.h"
+typedef struct _nbs_psys_t nbs_psys_t;
 
-// internal API
-#include "nbs_planet.h"
-#include "nbs_satellite.h"
+// Create a new psys object
+nbs_psys_t *
+    nbs_psys_new (void);
+
+// Destroy psys object
+void
+    nbs_psys_destroy (nbs_psys_t **self_p);
+
+// Run simulation
+void nbs_psys_run (nbs_psys_t *self);
+
+// Self test
+void
+    nbs_psys_test (bool verbose);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

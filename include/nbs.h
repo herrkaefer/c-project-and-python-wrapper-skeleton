@@ -28,6 +28,6 @@
     GLOBDOM_VERSION_PATCH)
 
 //  Public API classes
-#include "nbs_planet.h"
+#include "nbs_psys.h"
 
 #endif

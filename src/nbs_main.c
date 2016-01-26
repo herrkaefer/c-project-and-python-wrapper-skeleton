@@ -35,6 +35,11 @@ int main (int argc, char *argv [])
     //  Insert main code here
     if (verbose)
         // zsys_info ("nbs - N-Body Simulation");
-        printf ("nbs - N-Body Simulation");
+        printf ("version: %d\n", GLOBDOM_VERSION);
+
+    nbs_psys_t *sim = nbs_psys_new ();
+    nbs_psys_run (sim);
+    nbs_psys_destroy (&sim);
+
     return 0;
 }
