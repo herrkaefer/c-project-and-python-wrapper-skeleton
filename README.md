@@ -11,7 +11,7 @@ It then can be used as a template or standard reference for further development.
 
 ## Scalable C Summary
 
-A brief summary of [Scalable C](https://hintjens.gitbooks.io/scalable-c/) by @hintjens.
+This C project conforms to a (brief) version of [Scalable C](https://hintjens.gitbooks.io/scalable-c/) by @hintjens. Below is a summary.
 
 ### Code Organization
 
