@@ -1,6 +1,6 @@
 # C Project and Python Wrapper Skeleton
 
-## The Goal
+## Goal
 
 This project aims to provide a skeleton template of
 
@@ -28,7 +28,7 @@ One project, one repository.
 ### Class
 
 - A class defines a object which includes a struct and related methods.
-- Three kinds of class according to scope:
+- Three kinds of classes according to functional scope:
     - public class: object is exposed to public
     - private class: object is shared with other classes
     - source-file class: object is used within the source file (also private of course)
@@ -59,5 +59,5 @@ See the code and [CLASS C language style](http://rfc.zeromq.org/spec:21).
 
 ## The Python Wrapper
 
-Use [Cython](http://cython.org/) to make a Python wrapper of the C public APIs.
+todo: Use [Cython](http://cython.org/) to make a Python wrapper of the C public APIs.
 
