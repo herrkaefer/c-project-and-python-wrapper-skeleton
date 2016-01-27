@@ -10,8 +10,7 @@
 
 #include "nbs_classes.h"
 
-int main (int argc, char *argv [])
-{
+int main (int argc, char *argv []) {
     puts ("nbs - N-Body Simulation");
     bool verbose = false;
     int argn;

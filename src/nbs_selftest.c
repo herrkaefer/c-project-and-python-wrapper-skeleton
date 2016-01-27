@@ -30,8 +30,7 @@ all_tests [] = {
 //
 
 static void
-test_runall (bool verbose)
-{
+test_runall (bool verbose) {
     test_item_t *item;
     printf ("Running selftests...\n");
     for (item = all_tests; item->test; item++)
@@ -42,8 +41,7 @@ test_runall (bool verbose)
 
 
 int
-main (int argc, char **argv)
-{
+main (int argc, char **argv) {
     test_runall (true);
     return 0;
 }
