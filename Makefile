@@ -50,8 +50,11 @@ demo: lib
 	$(CC) -o $(DEMOTARGET) $(DEMOSRC) -Wall -O2 -L. $(LIBTARGET)
 	# gcc -static -o vrp_demo $(ODIR)/vrp_demo.o -L. -lvrp
 
+pylib:
+	python py/setup.py build_ext --inplace
+
 clean:
-	rm -rf $(TARGETDIR)/* *.dll *.a *so $(ODIR)/*
+	rm -rf $(TARGETDIR)/* *.dll *.a *so $(ODIR)/* py/*.c
 
 
 # g++ ga_cvrp.cpp heuristic.cpp tsp.cpp util.cpp -DDEBUG -Wall -o ../build/ga_cvrp -L../src/libyaml -lyaml

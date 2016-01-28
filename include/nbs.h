@@ -14,6 +14,11 @@
 
 //  External dependencies
 // eg. #include <czmq.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
+#include <assert.h>
 
 //  version macros for compile-time API detection
 #define GLOBDOM_VERSION_MAJOR 0

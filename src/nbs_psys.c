@@ -31,6 +31,7 @@ nbs_psys_new (void) {
     // Aim to initialize all properties to null/zero/false/empty by default.
     self->name = NULL;
 
+    printf ("psys created.");
     return self;
 }
 
@@ -50,6 +51,7 @@ nbs_psys_destroy (nbs_psys_t **self_p) {
         free (self);
         *self_p = NULL;
     }
+    printf ("psys destroyed.");
 }
 
 
