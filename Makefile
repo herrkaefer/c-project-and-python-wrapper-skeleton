@@ -14,7 +14,7 @@ CFLAGS = -I$(IDIR) -DDEBUG -DWITHSTATS -g -Wall -O2
 LDIR =
 LIBS =
 
-_OBJ = nbs_planet.o nbs_satellite.o
+_OBJ = nbs_psys.o nbs_planet.o nbs_satellite.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 _LIBSRC = nbs_psys.c nbs_planet.c nbs_satellite.c
 LIBSRC = $(patsubst %,$(SRCDIR)/%,$(_LIBSRC))
@@ -32,10 +32,10 @@ DEMOTARGET = $(TARGETDIR)/nbs_demo
 $(ODIR)/%.o: $(SRCDIR)/%.c
 	$(CC) -c $< -o $@ $(CFLAGS)
 
-lib: $(OBJ)
+clib: $(OBJ)
 	ar rcs $(LIBTARGET) $(ODIR)/*.o
 
-dll: $(OBJ)
+cdll: $(OBJ)
 	$(CC) -shared -o $@ $^ -Wl,--out-implib,$(LIBTARGET) $(LDIR) $(LIBS)
 
 test:
@@ -46,15 +46,10 @@ exe:
 	$(CC) $(EXESRC) -o $(EXETARGET) $(CFLAGS) $(LDIR) $(LIBS)
 
 demo: lib
-	# $(CC) -c $(SRCDIR)/vrp_demo.cpp -o $(ODIR)/vrp_demo.o $(CFLAGS)
 	$(CC) -o $(DEMOTARGET) $(DEMOSRC) -Wall -O2 -L. $(LIBTARGET)
-	# gcc -static -o vrp_demo $(ODIR)/vrp_demo.o -L. -lvrp
 
 pylib:
 	python py/setup.py build_ext --inplace
 
 clean:
 	rm -rf $(TARGETDIR)/* *.dll *.a *so $(ODIR)/* py/*.c
-
-
-# g++ ga_cvrp.cpp heuristic.cpp tsp.cpp util.cpp -DDEBUG -Wall -o ../build/ga_cvrp -L../src/libyaml -lyaml

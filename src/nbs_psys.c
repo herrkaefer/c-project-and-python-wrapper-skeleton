@@ -16,7 +16,8 @@
 
 struct _nbs_psys_t {
     // properties here
-    char *name;
+    int num_planets;
+    // nbs_planet_t *planets;
 };
 
 
@@ -24,12 +25,12 @@ struct _nbs_psys_t {
 //  Class constructor
 
 nbs_psys_t *
-nbs_psys_new (void) {
+nbs_psys_new () {
     nbs_psys_t *self = (nbs_psys_t *) malloc (sizeof (nbs_psys_t));
     assert (self);
 
     // Aim to initialize all properties to null/zero/false/empty by default.
-    self->name = NULL;
+    self->num_planets = 0;
 
     printf ("psys created.");
     return self;
@@ -46,7 +47,11 @@ nbs_psys_destroy (nbs_psys_t **self_p) {
         nbs_psys_t *self = *self_p;
 
         // free properties here
-        free (self->name); self->name = NULL; // or: safe_free (&self->name)
+        // int count;
+        // for (count = 0; count < self->num_planets; count++) {
+        //     nbs_planet_destroy (self->planets[count])
+        // }
+
 
         free (self);
         *self_p = NULL;
@@ -56,24 +61,12 @@ nbs_psys_destroy (nbs_psys_t **self_p) {
 
 
 //  --------------------------------------------------------------------------
-//  Get name property.
-//  Note that it's defined as 'const' so the caller cannot modify it.
+//  Get num_planets property.
 
-const char *
-nbs_psys_name (nbs_psys_t *self) {
+int
+nbs_psys_num_planets (nbs_psys_t *self) {
     assert (self);
-    return self->name;
-}
-
-
-//  --------------------------------------------------------------------------
-//  Set name property
-
-void
-nbs_psys_set_name (nbs_psys_t *self, const char *name) {
-    assert (self);
-    free (self->name);
-    self->name = strdup (name);
+    return self->num_planets;
 }
 
 

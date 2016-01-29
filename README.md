@@ -52,8 +52,9 @@ See the code and [CLASS C language style](http://rfc.zeromq.org/spec:21).
 - Project name: N-Body Simulation
 - Project prefix: nbs
 - Public classes:
-    - planet
+    - psys
 - Private classes:
+    - planet
     - satellite
 
 

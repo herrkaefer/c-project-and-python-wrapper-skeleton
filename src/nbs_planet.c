@@ -19,8 +19,6 @@ struct _nbs_planet_t {
     char *name;
     double mass;
     double velocity;
-    // int num_satellite;
-    // nbs_satellite_t *satellites;
 };
 
 

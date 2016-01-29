@@ -25,6 +25,10 @@ nbs_psys_t *
 void
     nbs_psys_destroy (nbs_psys_t **self_p);
 
+// Get num_planets property
+int
+nbs_psys_num_planets (nbs_psys_t *self);
+
 // Run simulation
 void nbs_psys_run (nbs_psys_t *self);
 
