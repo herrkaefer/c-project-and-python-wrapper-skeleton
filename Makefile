@@ -45,7 +45,7 @@ test:
 exe:
 	$(CC) $(EXESRC) -o $(EXETARGET) $(CFLAGS) $(LDIR) $(LIBS)
 
-demo: lib
+demo: clib
 	$(CC) -o $(DEMOTARGET) $(DEMOSRC) -Wall -O2 -L. $(LIBTARGET)
 
 pylib:

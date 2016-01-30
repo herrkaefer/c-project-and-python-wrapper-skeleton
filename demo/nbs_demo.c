@@ -1,5 +1,5 @@
 /*  =========================================================================
-    nbs_demo.c - Demo of public API usage
+    nbs_demo.c - Demo of public API usage for developers
     Copyright (c) the Contributors as noted in the AUTHORS file.
     This file is part of the N-Body Simulation Project.
     This Source Code Form is subject to the terms of the Mozilla Public
@@ -18,5 +18,8 @@
 
 int main (int argc, char *argv []) {
     puts ("Welcome to NBS!");
+    nbs_psys_t *psys = nbs_psys_new ();
+    nbs_psys_run (psys);
+    nbs_psys_destroy (&psys);
     return 0;
 }

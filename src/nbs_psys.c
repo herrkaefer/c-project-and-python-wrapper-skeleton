@@ -32,7 +32,7 @@ nbs_psys_new () {
     // Aim to initialize all properties to null/zero/false/empty by default.
     self->num_planets = 0;
 
-    printf ("psys created.");
+    printf ("psys created.\n");
     return self;
 }
 
@@ -45,18 +45,12 @@ nbs_psys_destroy (nbs_psys_t **self_p) {
     assert (self_p);
     if (*self_p) {
         nbs_psys_t *self = *self_p;
-
         // free properties here
-        // int count;
-        // for (count = 0; count < self->num_planets; count++) {
-        //     nbs_planet_destroy (self->planets[count])
-        // }
-
 
         free (self);
         *self_p = NULL;
     }
-    printf ("psys destroyed.");
+    printf ("psys destroyed.\n");
 }
 
 
@@ -77,6 +71,8 @@ void
 nbs_psys_run (nbs_psys_t *self) {
     assert (self);
     printf ("Simulation running ...\n");
+    // sleep(1);
+    printf ("stopped.\n");
 }
 
 
