@@ -60,5 +60,5 @@ See the code and [CLASS C language style](http://rfc.zeromq.org/spec:21).
 
 ## The Python Wrapper
 
-todo: Use [Cython](http://cython.org/) to make a Python wrapper of the C public APIs.
+A Python wrapper of the C public APIs is implemented by [Cython](http://cython.org/).
 
