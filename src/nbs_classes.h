@@ -8,8 +8,8 @@
     =========================================================================
 */
 
-#ifndef NBS_CLASSES_H_INCLUDED
-#define NBS_CLASSES_H_INCLUDED
+#ifndef __NBS_CLASSES_H_INCLUDED__
+#define __NBS_CLASSES_H_INCLUDED__
 
 // external API
 #include "../include/nbs.h"
