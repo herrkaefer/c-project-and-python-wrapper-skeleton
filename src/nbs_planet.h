@@ -8,8 +8,8 @@
     =========================================================================
 */
 
-#ifndef NBS_PLANET_H_INCLUDED
-#define NBS_PLANET_H_INCLUDED
+#ifndef __NBS_PLANET_H_INCLUDED__
+#define __NBS_PLANET_H_INCLUDED__
 
 #ifdef __cplusplus
 extern "C" {
@@ -18,44 +18,34 @@ extern "C" {
 typedef struct _nbs_planet_t nbs_planet_t;
 
 // Create a new planet object
-nbs_planet_t *
-    nbs_planet_new (void);
+nbs_planet_t *nbs_planet_new (void);
 
 // Destroy planet object
-void
-    nbs_planet_destroy (nbs_planet_t **self_p);
+void nbs_planet_destroy (nbs_planet_t **self_p);
 
 // Get name property
-const char *
-    nbs_planet_name (nbs_planet_t *self);
+const char *nbs_planet_name (nbs_planet_t *self);
 
 // Set name property
-void
-    nbs_planet_set_name (nbs_planet_t *self, const char *name);
+void nbs_planet_set_name (nbs_planet_t *self, const char *name);
 
 // Get mass property
-double
-    nbs_planet_mass (nbs_planet_t *self);
+double nbs_planet_mass (nbs_planet_t *self);
 
 // Set mass property
-void
-    nbs_planet_set_mass(nbs_planet_t *self, double mass);
+void nbs_planet_set_mass(nbs_planet_t *self, double mass);
 
 // Get velocity property
-double
-    nbs_planet_velocity (nbs_planet_t *self);
+double nbs_planet_velocity (nbs_planet_t *self);
 
 // Set velocity property
-void
-    nbs_planet_set_velocity(nbs_planet_t *self, double velocity);
+void nbs_planet_set_velocity(nbs_planet_t *self, double velocity);
 
 // Get momentum
-double
-    nbs_planet_momentum (nbs_planet_t *self);
+double nbs_planet_momentum (nbs_planet_t *self);
 
 // Self test
-void
-    nbs_planet_test (bool verbose);
+void nbs_planet_test (bool verbose);
 
 #ifdef __cplusplus
 }

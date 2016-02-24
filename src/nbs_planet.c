@@ -25,8 +25,7 @@ struct _nbs_planet_t {
 //  --------------------------------------------------------------------------
 //  Class constructor
 
-nbs_planet_t *
-nbs_planet_new (void) {
+nbs_planet_t *nbs_planet_new (void) {
     nbs_planet_t *self = (nbs_planet_t *) malloc (sizeof (nbs_planet_t));
     assert (self);
 
@@ -42,8 +41,7 @@ nbs_planet_new (void) {
 //  --------------------------------------------------------------------------
 //  Class destructor
 
-void
-nbs_planet_destroy (nbs_planet_t **self_p) {
+void nbs_planet_destroy (nbs_planet_t **self_p) {
     assert (self_p);
     if (*self_p) {
         nbs_planet_t *self = *self_p;
@@ -61,8 +59,7 @@ nbs_planet_destroy (nbs_planet_t **self_p) {
 //  Get name property.
 //  Note that it's defined as 'const' so the caller cannot modify it.
 
-const char *
-nbs_planet_name (nbs_planet_t *self) {
+const char *nbs_planet_name (nbs_planet_t *self) {
     assert (self);
     return self->name;
 }
@@ -71,8 +68,7 @@ nbs_planet_name (nbs_planet_t *self) {
 //  --------------------------------------------------------------------------
 //  Set name property
 
-void
-nbs_planet_set_name (nbs_planet_t *self, const char *name) {
+void nbs_planet_set_name (nbs_planet_t *self, const char *name) {
     assert (self);
     free (self->name);
     self->name = strdup (name);
@@ -82,8 +78,7 @@ nbs_planet_set_name (nbs_planet_t *self, const char *name) {
 //  --------------------------------------------------------------------------
 //  Get mass property.
 
-double
-nbs_planet_mass (nbs_planet_t *self) {
+double nbs_planet_mass (nbs_planet_t *self) {
     assert (self);
     return self->mass;
 }
@@ -92,8 +87,7 @@ nbs_planet_mass (nbs_planet_t *self) {
 //  --------------------------------------------------------------------------
 //  Set mass property
 
-void
-nbs_planet_set_mass (nbs_planet_t *self, double mass) {
+void nbs_planet_set_mass (nbs_planet_t *self, double mass) {
     assert (self);
     self->mass = mass;
 }
@@ -102,8 +96,7 @@ nbs_planet_set_mass (nbs_planet_t *self, double mass) {
 //  --------------------------------------------------------------------------
 //  Get velocity property.
 
-double
-nbs_planet_velocity (nbs_planet_t *self) {
+double nbs_planet_velocity (nbs_planet_t *self) {
     assert (self);
     return self->velocity;
 }
@@ -112,8 +105,7 @@ nbs_planet_velocity (nbs_planet_t *self) {
 //  --------------------------------------------------------------------------
 //  Set velocity property
 
-void
-nbs_planet_set_velocity (nbs_planet_t *self, double velocity) {
+void nbs_planet_set_velocity (nbs_planet_t *self, double velocity) {
     assert (self);
     self->velocity = velocity;
 }
@@ -122,8 +114,7 @@ nbs_planet_set_velocity (nbs_planet_t *self, double velocity) {
 //  --------------------------------------------------------------------------
 //  Get momentum
 
-double
-nbs_planet_momentum (nbs_planet_t *self) {
+double nbs_planet_momentum (nbs_planet_t *self) {
     assert (self);
     return self->mass * self->velocity;
 }
@@ -132,8 +123,7 @@ nbs_planet_momentum (nbs_planet_t *self) {
 //  --------------------------------------------------------------------------
 //  Self test of this class
 
-void
-nbs_planet_test (bool verbose)
+void nbs_planet_test (bool verbose)
 {
     printf (" * nbs_planet: ");
     nbs_planet_t *planet = nbs_planet_new ();

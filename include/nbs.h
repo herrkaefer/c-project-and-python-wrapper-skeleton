@@ -13,7 +13,6 @@
 #define __NBS_H_INCLUDED__
 
 //  External dependencies
-// eg. #include <czmq.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

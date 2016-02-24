@@ -24,8 +24,7 @@ struct _nbs_psys_t {
 //  --------------------------------------------------------------------------
 //  Class constructor
 
-nbs_psys_t *
-nbs_psys_new () {
+nbs_psys_t *nbs_psys_new () {
     nbs_psys_t *self = (nbs_psys_t *) malloc (sizeof (nbs_psys_t));
     assert (self);
 
@@ -40,8 +39,7 @@ nbs_psys_new () {
 //  --------------------------------------------------------------------------
 //  Class destructor
 
-void
-nbs_psys_destroy (nbs_psys_t **self_p) {
+void nbs_psys_destroy (nbs_psys_t **self_p) {
     assert (self_p);
     if (*self_p) {
         nbs_psys_t *self = *self_p;
@@ -57,8 +55,7 @@ nbs_psys_destroy (nbs_psys_t **self_p) {
 //  --------------------------------------------------------------------------
 //  Get num_planets property.
 
-int
-nbs_psys_num_planets (nbs_psys_t *self) {
+int nbs_psys_num_planets (nbs_psys_t *self) {
     assert (self);
     return self->num_planets;
 }
@@ -67,8 +64,7 @@ nbs_psys_num_planets (nbs_psys_t *self) {
 //  --------------------------------------------------------------------------
 //  run simulation
 
-void
-nbs_psys_run (nbs_psys_t *self) {
+void nbs_psys_run (nbs_psys_t *self) {
     assert (self);
     printf ("Simulation running ...\n");
     // sleep(1);
@@ -79,8 +75,7 @@ nbs_psys_run (nbs_psys_t *self) {
 //  --------------------------------------------------------------------------
 //  Self test of this class
 
-void
-nbs_psys_test (bool verbose)
+void nbs_psys_test (bool verbose)
 {
     printf (" * nbs_psys: ");
     nbs_psys_t *sim = nbs_psys_new ();

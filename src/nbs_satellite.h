@@ -8,8 +8,8 @@
     =========================================================================
 */
 
-#ifndef NBS_SATELLITE_H_INCLUDED
-#define NBS_SATELLITE_H_INCLUDED
+#ifndef __NBS_SATELLITE_H_INCLUDED__
+#define __NBS_SATELLITE_H_INCLUDED__
 
 #ifdef __cplusplus
 extern "C" {
@@ -18,24 +18,19 @@ extern "C" {
 typedef struct _nbs_satellite_t nbs_satellite_t;
 
 // Create a new satellite object
-nbs_satellite_t *
-    nbs_satellite_new (void);
+nbs_satellite_t * nbs_satellite_new (void);
 
 // Destroy satellite object
-void
-    nbs_satellite_destroy (nbs_satellite_t **self_p);
+void nbs_satellite_destroy (nbs_satellite_t **self_p);
 
 // Get name property
-const char *
-    nbs_satellite_name (nbs_satellite_t *self);
+const char *nbs_satellite_name (nbs_satellite_t *self);
 
 // Set name property
-void
-    nbs_satellite_set_name (nbs_satellite_t *self, const char *name);
+void nbs_satellite_set_name (nbs_satellite_t *self, const char *name);
 
 // Self test
-void
-    nbs_satellite_test (bool verbose);
+void nbs_satellite_test (bool verbose);
 
 #ifdef __cplusplus
 }

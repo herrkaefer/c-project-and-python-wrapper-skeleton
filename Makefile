@@ -27,7 +27,7 @@ DEMOSRC = $(DEMODIR)/nbs_demo.c
 DEMOTARGET = $(TARGETDIR)/nbs_demo
 
 
-.PHONY: clean lib dll test exe demo
+.PHONY: clib cdll test exe demo pylib clean
 
 $(ODIR)/%.o: $(SRCDIR)/%.c
 	$(CC) -c $< -o $@ $(CFLAGS)

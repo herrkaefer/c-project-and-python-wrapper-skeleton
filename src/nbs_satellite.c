@@ -23,8 +23,7 @@ struct _nbs_satellite_t {
 //  --------------------------------------------------------------------------
 //  Class constructor
 
-nbs_satellite_t *
-nbs_satellite_new (void) {
+nbs_satellite_t *nbs_satellite_new (void) {
     nbs_satellite_t *self = (nbs_satellite_t *) malloc (sizeof (nbs_satellite_t));
     assert (self);
 
@@ -38,8 +37,7 @@ nbs_satellite_new (void) {
 //  --------------------------------------------------------------------------
 //  Class destructor
 
-void
-nbs_satellite_destroy (nbs_satellite_t **self_p) {
+void nbs_satellite_destroy (nbs_satellite_t **self_p) {
     assert (self_p);
     if (*self_p) {
         nbs_satellite_t *self = *self_p;
@@ -57,8 +55,7 @@ nbs_satellite_destroy (nbs_satellite_t **self_p) {
 //  Get name property.
 //  Note that it's defined as 'const' so the caller cannot modify it.
 
-const char *
-nbs_satellite_name (nbs_satellite_t *self) {
+const char *nbs_satellite_name (nbs_satellite_t *self) {
     assert (self);
     return self->name;
 }
@@ -67,8 +64,7 @@ nbs_satellite_name (nbs_satellite_t *self) {
 //  --------------------------------------------------------------------------
 //  Set name property
 
-void
-nbs_satellite_set_name (nbs_satellite_t *self, const char *name) {
+void nbs_satellite_set_name (nbs_satellite_t *self, const char *name) {
     assert (self);
     free (self->name);
     self->name = strdup (name);
@@ -78,8 +74,7 @@ nbs_satellite_set_name (nbs_satellite_t *self, const char *name) {
 //  --------------------------------------------------------------------------
 //  Self test of this class
 
-void
-nbs_satellite_test (bool verbose)
+void nbs_satellite_test (bool verbose)
 {
     printf (" * nbs_satellite: ");
     nbs_satellite_t *satellite = nbs_satellite_new ();

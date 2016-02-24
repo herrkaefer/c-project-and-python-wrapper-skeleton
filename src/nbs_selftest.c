@@ -10,13 +10,13 @@
 
 #include "nbs_classes.h"
 
+
 typedef struct {
     const char *testname;
     void (*test) (bool);
 } test_item_t;
 
-static test_item_t
-all_tests [] = {
+static test_item_t all_tests [] = {
 // #ifdef WITH_DRAFTS
     { "nbs_planet", nbs_planet_test },
     { "nbs_satellite", nbs_satellite_test },
@@ -26,11 +26,9 @@ all_tests [] = {
 
 
 //  -------------------------------------------------------------------------
-//  Run all tests.
-//
+//  Run all tests
 
-static void
-test_runall (bool verbose) {
+static void test_runall (bool verbose) {
     test_item_t *item;
     printf ("Running selftests...\n");
     for (item = all_tests; item->test; item++)
@@ -40,8 +38,7 @@ test_runall (bool verbose) {
 }
 
 
-int
-main (int argc, char **argv) {
+int main (int argc, char **argv) {
     test_runall (true);
     return 0;
 }

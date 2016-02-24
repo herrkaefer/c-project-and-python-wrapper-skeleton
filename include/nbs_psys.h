@@ -8,8 +8,8 @@
     =========================================================================
 */
 
-#ifndef NBS_PSYS_H_INCLUDED
-#define NBS_PSYS_H_INCLUDED
+#ifndef __NBS_PSYS_H_INCLUDED__
+#define __NBS_PSYS_H_INCLUDED__
 
 #ifdef __cplusplus
 extern "C" {
@@ -18,23 +18,19 @@ extern "C" {
 typedef struct _nbs_psys_t nbs_psys_t;
 
 // Create a new psys object
-nbs_psys_t *
-    nbs_psys_new (void);
+nbs_psys_t *nbs_psys_new (void);
 
 // Destroy psys object
-void
-    nbs_psys_destroy (nbs_psys_t **self_p);
+void nbs_psys_destroy (nbs_psys_t **self_p);
 
 // Get num_planets property
-int
-nbs_psys_num_planets (nbs_psys_t *self);
+int nbs_psys_num_planets (nbs_psys_t *self);
 
 // Run simulation
 void nbs_psys_run (nbs_psys_t *self);
 
 // Self test
-void
-    nbs_psys_test (bool verbose);
+void nbs_psys_test (bool verbose);
 
 #ifdef __cplusplus
 }

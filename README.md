@@ -57,7 +57,6 @@ See the code and [CLASS C language style](http://rfc.zeromq.org/spec:21).
     - planet
     - satellite
 
-
 ## The Python Wrapper
 
 A Python wrapper of the C public APIs is implemented by [Cython](http://cython.org/).
