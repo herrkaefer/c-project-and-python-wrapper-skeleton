@@ -7,7 +7,7 @@ TARGETDIR = bin
 CC = gcc
 # CFLAGS = -I$(IDIR) -DDEBUG -DWITHSTATS -DWITHLOG -g -Wall -O2
 # CFLAGS = -I$(IDIR) -DDEBUG -g -Wall -O2
-CFLAGS = -I$(IDIR) -DDEBUG -DWITHSTATS -g -Wall -O2
+CFLAGS = -I$(IDIR) -DWITHSTATS -g -Wall -O2
 
 # LDIR = -L./lib3rd/libyaml
 # LIBS = -lyaml
